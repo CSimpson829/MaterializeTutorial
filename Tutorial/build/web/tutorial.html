@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Materialize Tutorial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+        <style>
+            html{
+                background-color:rgb(120, 128, 135);
+                font-size:14px;
+            }
+            .container{
+                margin-left:20px;
+            }
+            a{
+                color:#D79C28;
+                font-weight:bolder;
+            }
+            a:hover{
+                color:white;
+            }
+            h2{
+                color:#D79C28;
+                font-weight:bolder;
+            }
+            .nav-wrapper{
+                background-color:#4F5559;
+            }
+            .navbar-fixed a{
+                margin-right:100px;
+            } 
+            .separator{
+                background-color:#4F5559;
+                padding-top:5px;
+                padding-bottom:5px;
+            }
+            .separator h5{
+                margin-left:20px;
+                color:#D79C28;
+                font-weight:bold;
+            }
+            .btn{
+                margin-bottom:10px;
+                background-color:#D79C28;
+            }
+            .btn:hover{
+                background-color:#BD8E30;
+            }
+            .carousel{
+                height:150px;
+                margin-bottom:50px;
+            }
+
+            .carousel-item{
+                /*max-width:110px;*/
+                max-width:110px;
+            }
+            .p_header{
+                width:200px;
+                margin:auto;
+                font-weight:bolder;
+                color:#D79C28
+            }
+            .modal{
+                background-color:#788087;
+            }
+            .modal p{
+                font-weight:bold;
+                color:#D79C28;
+            }
+            i{
+                position: absolute;
+                top:20%;
+                color:#D79C28;
+                /*               background-color:goldenrod */
+            }
+            #rewind{
+                left:-100px;
+            }
+            #forward{
+                right:-100px;
+            }
+            #carouselContainer{
+                position:relative;
+                /*                background-color:red; */
+            }
+            .jqCarousel{
+                /*background-color:cornflowerblue;*/
+                width:700px;
+                margin:auto;
+            }
+            .jqCarousel-item{
+                position:absolute;
+                /* background-color: burlywood;*/
+                width:110px;
+                margin-right:100px;
+                float:left;
+            }
+            .jqCarousel-item img{
+                position:relative;
+                max-width:110px;
+                /*background-color:purple;*/
+            }
+            footer{
+                background-color:#788087;
+            }            
+            
+            #carousel1{
+                height:300px;
+            }
+            #carousel2{
+                margin-top:20px;
+                margin-bottom:20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo"></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="container">
+                <h2>Materialize Tutorial</h2>
+                <p>Materialize is a Javascript/CSS framework, similar to Bootstrap, based on Google's Material Design</p>
+                <p>Material Design is a design philosophy that creates a "metaphor" between technology and real life,
+                    by having the elements of the design mimic real world materials like ink and paper. the Elements are made to look
+                    like they have depth and texture by using familiar patterns of movement and shadow.</p>
+                <p> Learn more about <a href="http://materializecss.com/about.html">Materialize</a></p>
+                <p>Learn more about <a href="https://material.google.com/">Material Design</a></p>
+                <br />
+            </div>
+
+            <!-- Parallax Section-->
+            <div>
+
+
+                <div class="separator">
+                    <h5>Parallax</h5>
+                </div>
+                <div class="container">
+                    <p>Parallax is a visual effect that creates the illusion that an element is floating above another element, closer to the viewer.
+                        <br/>While scrolling, the element "closer" to the viewer scrolls by quicker than the element behind it, giving the illusion of depth
+                        to the page.
+                        <br/>the effect can be achieved very easily using Materialize</p>
+                    <p><strong>parallax-container</strong>: adding this class name to the div makes it a parallax element
+                        <br/><strong>parallax</strong>: this element is where you will place the image itself, Materialize will create a separation between
+                        the elements below and above the image and automatically create the parallax effect.</p>
+                    <p>
+                        The Parallax effect must be initialized inside a JQuery document.ready function before it will appear on your webpage.
+                    </p>
+                    <a class="btn modal-trigger" href="#parallaxModal">Sample Code</a>
+                </div>
+
+                <div class="parallax-container" style="height:200px">
+                    <div class="parallax"><img src="Genji_background_resize.jpg" alt="genji background"></div>
+                </div>
+
+                <div class="container">
+                    <p><a href="http://materializecss.com/parallax.html">Materializecss.com Parallax Example</a></p>
+                    <div id="parallaxModal" class="modal" style="width:75%">
+                        <div class="modal-content">
+                            <p>Parallax html sample code</p>
+                            <img src="parallax_screencap.PNG" alt='parallax screencap'>
+                            <br/>
+                            <p>Jquery Initialization</p>
+                            <img src="parallax_init_screencap.PNG" alt="parallax init screencap">
+                        </div>
+
+                        <br/><br/>
+                    </div>
+                </div>
+            </div>
+            <!--End Parallax Section -->
+
+            <!-- Carousel Section -->
+            <div>
+
+                <div class="separator">
+                    <h5>Carousel</h5>
+                </div>
+
+                <div class="container">
+                    <p>Materializes Carousel is an Image slider with a much more
+                        robust customization than its Parallax.
+                        <br/> Each image can also be a link that can open a new page or a "modal", and The Carousel is also
+                        touch-enabled, which makes it a nice addition to mobile web pages.
+                    </p>
+                    <p><strong>carousel</strong>: including this class name tells Materialize that this div is the Carousel
+                        <br/> <strong>carousel-item</strong>: elements with this class name will be placed inside the carousel
+                        as carousel items. These are the actual images which will "spin" around the carousel
+                    </p>
+                    <p><strong>Customization Options</strong>
+                        <br />
+                        <strong>time_constant</strong>: changes how long it takes for the carousel to spin to the next element. <br />
+                        <strong>dist</strong>: changes the "perspective zoom", ie how much of a difference in size there is from 
+                        the element in the center to the elements on either side. a Negative number makes the side elements smaller,
+                        a Positive Number makes them larger. <br />
+                        <strong>shift</strong>: the distance between the center element from the side elements.<br />
+                        <strong>padding</strong>: similar to css padding-left/right, this changes the distance between the elements. <br />
+                        <strong>full_width</strong>: Changes whether or not the Carousel simulates having circular depth or takes up the width of 
+                        the carousel linearly.<br />
+                        <strong>indicators</strong>: changes whether or not indicators are shown below the Carousel. Indicators will show which element
+                        in the carousel is centered and how many elements there are in the carousel.<br />
+                        <strong>no_wrap</strong>: changes whether the carousel is circular, or simply scrolls from the from the first
+                        element to the last one without wrapping back around.
+
+                    </p>
+                </div>
+                <p class="p_header">Default Carousel</p>
+                <div class="carousel" id="carousel1">
+                    <div class="carousel-item"><img src="genji_portrait.png" alt="genji portrait"></div>
+                    <div class="carousel-item"><img src="mccree_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="pharah_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="reaper_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="soldier76_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="tracer_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="bastion_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="hanzo_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="junkrat_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="mei_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="torbjorn_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="widowmaker_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="dva_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="reinhardt_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="roadhog_portrait.png" alt="roadhog portrait"></div>
+                    <div class="carousel-item"><img src="winston_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="zarya_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="ana_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="lucio_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="mercy_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="symettra_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="zenyatta_portrait.png" alt="mccree portrait"></div>           
+                </div>
+
+                <p class="p_header">Full-Width Carousel</p>
+                <div class="carousel" id="carousel2">
+                    <div class="carousel-item"><img src="genji_portrait.png" alt="genji portrait"></div>
+                    <div class="carousel-item"><img src="mccree_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="pharah_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="reaper_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="soldier76_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="tracer_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="bastion_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="hanzo_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="junkrat_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="mei_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="torbjorn_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="widowmaker_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="dva_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="reinhardt_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="roadhog_portrait.png" alt="roadhog portrait"></div>
+                    <div class="carousel-item"><img src="winston_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="zarya_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="ana_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="lucio_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="mercy_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="symettra_portrait.png" alt="mccree portrait"></div>
+                    <div class="carousel-item"><img src="zenyatta_portrait.png" alt="mccree portrait"></div>           
+                </div>
+                <div class="container">
+                    <a class="btn modal-trigger" href="#carouselModal" style="margin-bottom:20px">Sample Code</a>
+                    <div id="carouselModal" class="modal" style="width:75%">
+                        <div class="modal-content">
+                            <p> default Carousel html sample code</p>
+                            <img src="default_carousel_screencap.PNG" alt='parallax screencap'>
+                            <br/>
+                            <p> Default Carousel Jquery Initialization</p>
+                            <img src="default_carousel_init_screencap.PNG" alt="parallax init screencap">
+                            <br />
+                            <p>Full_Width Carousel Jquery Initialization</p>
+                            <img src="fullwidth_carousel_init_screencap.PNG" alt="parallax init screencap">
+                        </div>
+                    </div>
+                    <br/>
+                    <a href='http://materializecss.com/carousel.html'>Materializecss.com Carousel Examples</a> <br/><br/>
+                </div>
+            </div>
+            <!-- End Carousel Section -->
+
+            <!-- Auto Scrolling Carousel Section -->
+            <div>
+                <div class="separator">
+                    <h5>Auto-Scrolling Carousel with Navigation Buttons</h5>
+                </div>
+                <div class="container">
+                    <p>Materializes Carousel comes with two JQuery functions that can be called in the script,
+                        <strong>next</strong> and <strong>previous</strong><br />
+                        Using these two functions, and taking advantage of the Carousels <strong>time_constant</strong> customization option,
+                        we can create a Carousel that continuously scrolls on it's own. <br />
+                        To make the auto-scrolling Carousel easy to use, we can have it stop when the mouse hovers over its elements
+                        by using jquery's <strong>mouseenter</strong> and <strong>mouseleave</strong> functions to 
+                        temporarily pause the auto-scrolling until the mouse leaves the carousel.
+                    </p>
+                </div>
+                <button class="btn" id="startCarouselButton">Pause Carousel</button>
+
+                <div id="carouselContainer" style="width:75%; margin:auto">
+                    <div class="carousel" id="carousel3">
+                        <div class="carousel-item"><img src="genji_portrait.png" alt="genji portrait"></div>
+                        <div class="carousel-item"><img src="mccree_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="pharah_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="reaper_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="soldier76_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="tracer_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="bastion_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="hanzo_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="junkrat_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="mei_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="torbjorn_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="widowmaker_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="dva_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="reinhardt_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="roadhog_portrait.png" alt="roadhog portrait"></div>
+                        <div class="carousel-item"><img src="winston_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="zarya_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="ana_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="lucio_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="mercy_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="symettra_portrait.png" alt="mccree portrait"></div>
+                        <div class="carousel-item"><img src="zenyatta_portrait.png" alt="mccree portrait"></div>           
+                    </div>
+                    <i class="material-icons large" id="rewind">fast_rewind</i>
+                    <i class="material-icons large" id="forward">fast_forward</i>
+                </div>
+
+                <div class="container">
+                    <a class="btn modal-trigger" href="#autoCarouselModal" style="margin-bottom:20px">Code</a>
+                    <div id="autoCarouselModal" class="modal" style="width:75%">
+                        <div class="modal-content">
+                            <p> Auto-scrolling Carousel HTML</p>
+                            <img src="autocarousel_html_screencap.PNG" alt='parallax screencap'>
+                            <br/>
+                            <p>Jquery Code</p>
+                            <img src="autocarousel_jq1_screencap.PNG" alt="parallax init screencap"><br />
+                            <img src="autocarousel_jq2_screencap.PNG" alt="parallax init screencap">
+                        </div>
+                    </div>
+                    <br />
+                    <a href="http://www.w3schools.com/jquery/event_mouseleave.asp">W3Schools Mouseleave and Mouseenter</a>
+                    <br />
+                    <a href="http://www.w3schools.com/jsref/met_win_setinterval.asp">W3Schools setinterval() and clearinterval()</a>
+                    <br />
+                    <a href="http://materializecss.com/carousel.html">Materializecss.com Carousel Next and Previous Functions</a>
+                    <BR /><br />
+                </div>
+            </div>
+            <!-- End Auto Scrolling Carousel Section -->
+
+            <!-- JQuery Carousel -->
+            <div class="separator">
+                <h5>Carousel with Javascript and JQuery</h5>
+            </div>
+            <div class="container">
+                <p>I attempted to recreate the basic functionality of the Materialize Carousel using Javascript and Jquery</p>
+                <p>First, I created an array that stored the id of each item of the carousel.</p>
+                <p>
+                    Then I set the variable to determine the size of the carousel div and also the "overflow" width (the width
+                    at which the elements of the carousel would wrap back around to the beginning). The overflow width is the width 
+                    of the carousel element multiplied by the number of elements.
+                </p>
+                <p>The move() function takes two parameters, the index of the element in the array and the 
+                    speed at which the element will be moved. <br /> The Initialization of the carousel is called when the document
+                    loads, and simply calls the move function with a speed of 0 (making the movement instant) until every element
+                    has been moved into its starting position in the carousel.
+                </p>
+                <p>
+                    from that point on, pressing the button will call the move function for every element in the carousel in a loop,
+                    moving each element forward one place at a default speed of 100 milliseconds.
+                </p>
+                <p>When an element of the carousel is moved outside the width of the carousel, its width becomes 0 and its
+                    opacity it set to 0 until it wraps back around to the start of the carousel.<br /><br /></p>
+            </div>
+
+
+            <div class="jqCarousel" style="height:120px; margin-bottom:20px">
+                <div class="jqCarousel-item">
+                    <img src="genji_portrait.png" alt="genji portrait" id="img0">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="mccree_portrait.png" alt="mccree portrait" id="img1">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="pharah_portrait.png" alt="mccree portrait" id="img2">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="reaper_portrait.png" alt="mccree portrait" id="img3">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="soldier76_portrait.png" alt="mccree portrait" id="img4">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="tracer_portrait.png" alt="mccree portrait" id="img5">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="bastion_portrait.png" alt="mccree portrait" id="img6">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="hanzo_portrait.png" alt="mccree portrait" id="img7">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="junkrat_portrait.png" alt="mccree portrait" id="img8">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="mei_portrait.png" alt="mccree portrait" id="img9">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="torbjorn_portrait.png" alt="mccree portrait" id="img10">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="widowmaker_portrait.png" alt="mccree portrait" id="img11">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="dva_portrait.png" alt="mccree portrait" id="img12">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="reinhardt_portrait.png" alt="mccree portrait" id="img13">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="roadhog_portrait.png" alt="mccree portrait" id="img14">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="winston_portrait.png" alt="mccree portrait" id="img15">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="zarya_portrait.png" alt="mccree portrait" id="img16">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="ana_portrait.png" alt="mccree portrait" id="img17">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="lucio_portrait.png" alt="mccree portrait" id="img18">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="mercy_portrait.png" alt="mccree portrait" id="img19">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="symettra_portrait.png" alt="mccree portrait" id="img20">
+                </div>
+                <div class="jqCarousel-item">
+                    <img src="zenyatta_portrait.png" alt="mccree portrait" id="img21">
+                </div>
+            </div>
+            <a class="waves-effect waves-light btn" id="jqCarousel-button" style="margin-left:40%">Spin Carousel</a>
+            <br /><br />
+
+            <div class="container">      
+                <a class="btn modal-trigger" href="#jqCarouselModal" style="margin-bottom:20px">Code</a>
+                <div id="jqCarouselModal" class="modal" style="width:75%">
+                    <div class="modal-content">
+                        <p>  JQuery Carousel HTML</p>
+                        <img src="jqCarousel_html_screencap.PNG" alt='parallax screencap'>
+                        <br/>
+                        <p>Jquery Code</p>
+                        <img src="jqCarousel_jq1.PNG" alt="parallax init screencap"><br />
+                        <img src="jqCarousel_jq3.PNG" alt="parallax init screencap">
+                    </div>
+                </div>
+                <br />
+                <a href="http://www.w3schools.com/jquery/jquery_css.asp">W3Schools Jqeury .css()</a>
+                <br />
+                <a href="http://www.w3schools.com/jquery/prop_length.asp">W3Schools Jquery .length()</a>
+                <br /><br />
+            </div>
+            <!-- end JQ Carousel -->
+
+            <div class="separator">
+                <h5>Modals</h5>
+            </div>
+            <div class="container">
+                <p>Materialize Modals are small windows within the document that open up when you click on a Modal Trigger, and are useful for things
+                    like Dialog boxes or Confirmation messages.<br />
+                    I've been using Modals throughout this document to display the code, the trigger in these cases being the Materialize
+                    wave Buttons.</p>
+
+                <div id="exampleModal" class="modal" style="width:75%">
+                    <div class="modal-content">
+                        <p>This is a Standard Modal</p>
+                        <img src="standardModal.PNG">
+                        <p>html code for the Trigger Button</p>
+                        <img src="modalTriggerButtons.PNG">
+                        <p>JQuery Initialization</p>
+                        <img src="jqModalInit.PNG">
+                        <br/><br/>
+                    </div>                        
+                </div>
+
+
+                <div id="bottomSheetModal" class="modal bottom-sheet">
+                    <div class="modal-content">
+                        <h4>This is the Bottom Sheet Modal!</h4>
+                        <p>It slides up from the bottom of the screen, then Back down!</p>
+                        <p>You can change a Standard Modal into a Bottom Sheet Modal by
+                            changing the class to class="modal bottom-sheet"</p><br/><br/>
+                        <img src="bottomModal.PNG">
+                        <br /><br />
+
+                    </div>
+                </div>
+
+                <div id="footerModal" class="modal modal-fixed-footer" style="width:75%">
+                    <div class="modal-content">
+                        <p>This is a Modal with a Fixed Footer</p>
+                        <p>You can turn a Standard Modal into a Fixed-Footer Modal by changing
+                            the class to class="modal modal-fixed-footer",<br />
+                            and then adding another div with class="modal-footer"<br/><br/>
+                            <img src="fixedFooterModal.PNG">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                    </div>
+                </div>
+
+                <p>Materialize Offers a few different types of Modals to better facilitate a wider range of uses.</p>
+            </div>
+
+
+            <a class="btn modal-trigger" href="#exampleModal">Standard Modal</a>
+            <a class="btn modal-trigger" href="#footerModal">Modal with Fixed Footer</a>
+            <a class="btn modal-trigger" href="#bottomSheetModal">Bottom Sheet Modal</a>
+            <br/><br/>
+            <a href="http://materializecss.com/modals.html">Materialize.css Modal Examples</a>
+            <br/><br/> 
+
+            <footer class="page-footer" style="background-color:#4F5559">
+                    <div class="container" style="padding-bottom:10px; color:white">
+                        Connor Simpson
+                    </div>
+            </footer>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('.parallax').parallax();
+            });
+
+            $(document).ready(function () {
+                $('#carousel1').carousel({
+                    
+                });
+            });
+
+
+            $(document).ready(function () {
+                $('#carousel2').carousel({
+                    full_width: true,
+                    padding: 20,
+                });
+            });
+
+        </script>
+
+
+
+        <script>
+            $(document).ready(function () {
+                $('.modal-trigger').leanModal({
+                    in_duration: 400,
+                    out_duration: 400
+                });
+            });
+        </script>
+
+
+        <script>
+            var autoScrollTimer = 4000;
+            var scrollspeed = 2000;
+            var v;
+            var spinning = true;
+            $(document).ready(function () {
+            $('#carousel3').carousel({
+                    time_constant: scrollspeed,
+                    dist: 0,
+                    padding: 65,
+                    full_width: false
+                });
+                autoScrollQuick();
+                initializeCarousel();
+            
+                $("#startCarouselButton").click(function()
+                {
+                    console.log("PRESSED");
+                    
+                    if(spinning === false){
+                       autoScrollQuick();
+                       spinning = true;
+                    }else{
+                        stopScroll();
+                        spinning = false;
+                    }  
+        
+                });
+            });
+            $('#carousel3').mouseenter(function () {
+                if(spinning === true){
+                    stopScroll();
+                }
+                
+            });
+            $('#carousel3').mouseleave(function () {
+                if(spinning === true){
+                   autoScrollQuick(); 
+                }
+                
+            });
+            $('i').mouseenter(function () {
+                if(spinning === true){
+                   stopScroll(); 
+                }                
+            });
+            $('i').mouseleave(function () {
+                if(spinning === true){
+                    autoScroll();
+                }
+                
+            });
+            $('#forward').click(function () {
+                next();
+            });
+            $('#rewind').click(function () {
+                prev();
+            });
+
+            function autoScroll() {
+                v = setInterval(function(){next();}, autoScrollTimer);
+            }
+            function autoScrollQuick() {
+                setTimeout(function(){next();}, 0);
+                autoScroll();
+            }
+            function stopScroll() {
+                clearInterval(v);
+                $('#carousel3').carousel({
+                    time_constant: 0
+                });
+            }
+            function next() {
+                $('#carousel3').carousel('next');
+            }
+            function prev() {
+                $('#carousel3').carousel('prev');
+            }
+        </script>
+
+        <script>
+
+            var maxpos = (turnElementToInt($('.jqCarousel').css('width')) - turnElementToInt($('.jqCarousel-item').css("width")));
+            var itemWidth = $('.jqCarousel-item').css("width");
+            var numCarouselItems = parseInt($("div.jqCarousel-item").length);
+            var overflow = ((turnElementToInt($('.jqCarousel-item').css("width"))) * (numCarouselItems));
+            var images = ['img0', 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8',
+                'img9', 'img10', 'img11', 'img12', 'img13', 'img14', 'img15', 'img16', 'img17', 'img18',
+                'img19', 'img20', 'img21'];
+
+            $('#jqCarousel-button').click(function () {
+                for (i = images.length - 1; i >= 0; i--) {
+                    moveItem(i, 100);
+                }
+            });
+
+            function moveItem(index, speed) {
+
+                var string = $('#' + images[index]).css('left');
+                var intLeft = turnElementToInt(string);
+                
+                if ((intLeft < overflow)) {
+                    $('#' + images[index]).animate({left: '+=120'}, speed);
+                    if (intLeft > (maxpos)) {
+                        $('#' + images[index]).animate({opacity: '0', width: 'hide'}, 0);
+                    }
+                } else if (intLeft > overflow) {
+                    $('#' + images[index]).animate({left: '0', opacity: '1', width: 'show'}, 0);
+                }
+
+            }
+
+            function turnElementToInt(string) {
+                var substring = string.substr(0, string.length - 2);
+                var changedInt = parseInt(substring);
+                return changedInt;
+            }
+            function initializeCarousel() {
+                var w = images.length - 1;
+                for (i = images.length - 1; i >= 0; i--) {
+                    for (j = w; j > 0; j--) {
+                        moveItem(i, 0);
+                    }
+                    w--;
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
